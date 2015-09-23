@@ -15,6 +15,16 @@
 }
 
 /*forms*/
-input[type=text] {
+input[type=text],
+input[type=email] {
 	width: 100%;
+	padding: 3px;
+	border: none;
+	border-bottom: solid 2px #aaa;
+}
+
+form input,
+form label {
+	clear: both;
+	margin: 3px;
 }

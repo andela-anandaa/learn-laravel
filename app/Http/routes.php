@@ -24,6 +24,12 @@ Route::get('user/{name}', ['as' => 'profile', function ($name) {
 	return view('test.profile', array('name' => $name));
 }]);
 
+Route::get('req/', function () {
+	return view('test.req');
+});
+
+Route::post('req/post', 'TestController@req');
+
 Route::resource('photo', 'PhotoController',
 				['only' => ['index', 'show']]);
 
