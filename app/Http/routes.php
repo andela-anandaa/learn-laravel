@@ -20,3 +20,10 @@ Route::get('/temp', 'TestController@temp');
 Route::get('/home', function () {
 	return view('test.home');
 });
+Route::get('user/{name}', ['as' => 'profile', function ($name) {
+	return view('test.profile', array('name' => $name));
+}]);
+
+Route::get('/{any?}', function ($any = 'any') {
+	return view('test.home');
+});

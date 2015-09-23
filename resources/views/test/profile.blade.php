@@ -6,8 +6,9 @@
     <div class="mdl-grid demo-content">
     <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
 
-    	<h4>Plain Home</h4>
-    	<p>Sample URL: {{ url('/test', 'Test')}}</p>
+    	<h4>Profile</h4>
+    	<p>Profile for: {{ $name }}</p>
+    	<p><a href="{{ route('profile', 'wanjala')}}">James</a>
 
     </div>
 
