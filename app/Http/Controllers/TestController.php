@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Routing\Controller as BaseController;
+use App\Http\Controllers;
 // use Illuminate\Support\Facades\View;
 
 use Log;
 
-class TestController extends BaseController {
+class TestController extends Controller
+{
 	
 	public function index()
 	{

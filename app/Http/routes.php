@@ -24,6 +24,11 @@ Route::get('user/{name}', ['as' => 'profile', function ($name) {
 	return view('test.profile', array('name' => $name));
 }]);
 
+Route::resource('photo', 'PhotoController',
+				['only' => ['index', 'show']]);
+
+
+// fall-back
 Route::get('/{any?}', function ($any = 'any') {
 	return view('test.home');
 });
