@@ -47,4 +47,9 @@ class TestController extends Controller
 			var_dump(array('post' => 'nothing'));
 		}
 	}
+
+	public function route($id)
+	{
+		return response()->json(["id" => $id]);
+	}
 }

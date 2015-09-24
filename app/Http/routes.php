@@ -33,6 +33,21 @@ Route::post('req/post', 'TestController@req');
 Route::resource('photo', 'PhotoController',
 				['only' => ['index', 'show']]);
 
+// Routes with RegEx
+Route::get('/route/{id}', 'TestController@route')
+	->where('id', '[0-9]+');
+
+// Route prefixes
+Route::group(['prefix' => 'admin'], function () {
+	Route::get('users', function () {
+		return response()->json(["ok" => "users"]);
+	});
+
+	Route::get('dashboard', function () {
+		return response()->json(["ok" => "dashboard"]);
+	});
+});
+
 
 // fall-back
 Route::get('/{any?}', function ($any = 'any') {
